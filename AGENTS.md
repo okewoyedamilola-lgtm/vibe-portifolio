@@ -9,7 +9,7 @@ This file documents the **pm-portfolio** project for AI agents and developers. U
 - **Name:** pm-portfolio  
 - **Purpose:** Minimal, static portfolio site for **Damilola Israel Okewoye** (Product Manager).  
 - **Stack:** Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS.  
-- **Output:** Static export (`output: 'export'` in `next.config.js`). Build produces static files in `out/` for deployment (e.g. Vercel).
+- **Output:** Static export (`output: 'export'` in `next.config.js`). Build produces static files in `out/` for deployment (e.g. Vercel, Cloudflare Pages).
 
 ---
 
@@ -53,7 +53,8 @@ This file documents the **pm-portfolio** project for AI agents and developers. U
   - On **Windows PowerShell**, use `;` instead of `&&` to chain commands (e.g. `Set-Location "path"; npm run dev`).  
 - **`npm run build`** — Production build; static export goes to `out/`.  
 - **`npm run start`** — Serve production build locally.  
-- **`npm run lint`** — Run Next.js ESLint.
+- **`npm run lint`** — Run Next.js ESLint.  
+- **`npm run deploy:cf`** — Build and deploy to Cloudflare Pages (requires Wrangler login and a Pages project named `pm-portfolio`).
 
 ---
 
@@ -81,7 +82,10 @@ This file documents the **pm-portfolio** project for AI agents and developers. U
 1. **CV:** Add `public/cv.pdf`.  
 2. **Formspree:** Create a form at [formspree.io](https://formspree.io), then set `FORMSPREE_ENDPOINT` in `src/app/contact/page.tsx`.  
 3. **Case studies:** Add PDFs to `public/case-studies/` and set `caseStudyPdf` in `src/app/projects/[slug]/page.tsx` for each project.  
-4. **Deploy:** Push to GitHub and connect to Vercel; Vercel will use `next build` (static export). Deploy the `out/` folder on other static hosts.
+4. **Deploy:**  
+   - **Cloudflare Pages:** Run `npm run deploy:cf` (after `npx wrangler login` and creating a Pages project), or connect the repo in [Cloudflare Dashboard](https://dash.cloudflare.com) → Pages → Create project → Git; set **Build command** `npm run build`, **Build output directory** `out`.  
+   - **Vercel:** Push to GitHub and connect to Vercel; static export works automatically.  
+   - **Other:** Deploy the `out/` folder to any static host.
 
 ---
 
