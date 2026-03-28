@@ -32,7 +32,19 @@ export default function HomePage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-6 py-20 md:py-28">
         <div className="flex flex-col md:flex-row md:items-center gap-10 md:gap-12">
-          <div className="order-2 md:order-1 flex-1 min-w-0">
+          <div className="shrink-0 mx-auto md:mx-0">
+            <div className="relative w-56 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+              <Image
+                src="/DSC_9331.JPG"
+                alt="Damilola Israel Okewoye"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 256px, 288px"
+                priority
+              />
+            </div>
+          </div>
+          <div className="flex-1 min-w-0">
             <h1 className="font-display font-bold text-3xl md:text-4xl text-black mb-3">
               Damilola Israel Okewoye
             </h1>
@@ -46,18 +58,6 @@ export default function HomePage() {
             >
               View Projects
             </Link>
-          </div>
-          <div className="order-1 md:order-2 shrink-0 mx-auto md:mx-0">
-            <div className="relative w-56 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
-              <Image
-                src="/DSC_9331.JPG"
-                alt="Damilola Israel Okewoye"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 256px, 288px"
-                priority
-              />
-            </div>
           </div>
         </div>
       </section>
