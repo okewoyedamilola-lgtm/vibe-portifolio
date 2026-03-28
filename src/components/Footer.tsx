@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { LINKEDIN_URL } from '@/constants/social';
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
               Contact
             </Link>
             <a
-              href="https://www.linkedin.com/in/damilola-okewoye"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-black hover:text-accent transition-colors"

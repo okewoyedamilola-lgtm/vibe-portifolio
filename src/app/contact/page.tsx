@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { LINKEDIN_URL } from '@/constants/social';
 
 // Replace with your Formspree form ID after signing up at https://formspree.io
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
@@ -98,7 +99,7 @@ export default function ContactPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://www.linkedin.com/in/damilola-okewoye"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent hover:text-accent-hover font-medium"
@@ -117,9 +118,6 @@ export default function ContactPage() {
               </a>
             </li>
           </ul>
-          <p className="mt-4 text-sm text-gray-500">
-            Update the links above with your real LinkedIn and TikTok URLs.
-          </p>
         </div>
       </div>
     </div>

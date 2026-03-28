@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
+import { LINKEDIN_URL } from '@/constants/social';
 
 const featuredProjects = [
   {
@@ -52,12 +53,22 @@ export default function HomePage() {
             <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-8">
               I build products that combine user research, strategy, and execution to solve real problems.
             </p>
-            <Link
-              href="/projects"
-              className="inline-block px-6 py-3 bg-accent text-white font-semibold text-sm rounded-md hover:bg-accent-hover transition-colors"
-            >
-              View Projects
-            </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="/projects"
+                className="inline-block px-6 py-3 bg-accent text-white font-semibold text-sm rounded-md hover:bg-accent-hover transition-colors"
+              >
+                View Projects
+              </Link>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-black font-semibold text-sm rounded-md hover:border-accent hover:text-accent transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>
