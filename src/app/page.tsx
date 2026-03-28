@@ -30,9 +30,9 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-20 md:py-28">
-        <div className="flex flex-col md:flex-row md:items-center gap-10 md:gap-12">
-          <div className="shrink-0 mx-auto md:mx-0">
+      <section className="max-w-4xl mx-auto px-6 py-20 md:py-28" dir="ltr">
+        <div className="grid grid-cols-1 md:grid-cols-[auto_minmax(0,1fr)] gap-10 md:gap-12 md:items-center">
+          <div className="mx-auto md:mx-0 md:justify-self-start">
             <div className="relative w-56 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
               <Image
                 src="/DSC_9331.JPG"
@@ -44,7 +44,7 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="min-w-0">
             <h1 className="font-display font-bold text-3xl md:text-4xl text-black mb-3">
               Damilola Israel Okewoye
             </h1>
