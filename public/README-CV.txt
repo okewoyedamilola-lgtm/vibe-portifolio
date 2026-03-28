@@ -1,4 +1,9 @@
-Add your CV PDF here:
+CV file options (place in this folder):
+
+Word (current setup)
+- Name the file: cv.docx
+- The /cv page offers download and “open in new tab”. Browsers cannot show a .docx preview inline like a PDF.
+
+PDF (optional)
 - Name the file: cv.pdf
-- Place it in this folder (public/)
-The CV page will then show a preview and download button for it.
+- If you switch the site to use cv.pdf again, the /cv page can use an iframe preview plus download links.
